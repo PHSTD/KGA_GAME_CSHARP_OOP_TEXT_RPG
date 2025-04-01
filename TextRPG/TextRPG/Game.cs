@@ -7,6 +7,13 @@ public static class Game
 
     private static Dictionary<string, Scene> sceneDic;
     private static Scene curScene;
+
+    private static Player player;
+    public static Player Player
+    {
+        get { return player;  }
+    }
+    
     // 1. 상황들
     // 2. 인벤토리
     // 3. 플레이어
