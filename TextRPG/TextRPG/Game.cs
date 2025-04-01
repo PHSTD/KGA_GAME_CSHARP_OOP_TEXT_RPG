@@ -30,6 +30,10 @@ public static class Game
 
         // 처음시작할 씬을 선정
         curScene = sceneDic["Title"];
+
+        player = new Player();
+        player.Power = 10;
+        player.speed = 8;
     }
     // 2. 게임종료
     public static void End()
@@ -41,11 +45,12 @@ public static class Game
         // 게임 동작시에 필요한 작업들
         while (gameOver == false)
         {
-           Console.Clear(); 
+            Console.Clear(); 
             curScene.Render();
             Console.WriteLine();
             curScene.Choice();
             curScene.Input();
+            Console.WriteLine();
             curScene.Result();
             Console.WriteLine();
             curScene.Wait();
@@ -62,10 +67,20 @@ public static class Game
     public static void GameOver(string reason)
     {
         Console.Clear();
-        Console.WriteLine("게임오버");
+        Console.WriteLine("************************************");
+        Console.WriteLine("           게임오버              ");
+        Console.WriteLine("************************************");
         Console.WriteLine(reason);
 
         gameOver = true;
+    }
+
+    public static void PrintInfo()
+    {
+        Console.WriteLine("************************************");
+        Console.WriteLine(" 플레이어");
+        Console.WriteLine(" 힘: {0} 속도 :{1} ", player.Power, player.speed);
+        Console.WriteLine("************************************");
     }
     
 }
