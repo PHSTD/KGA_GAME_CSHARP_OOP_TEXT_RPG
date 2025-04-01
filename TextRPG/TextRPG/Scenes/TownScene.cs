@@ -72,8 +72,7 @@ public class TownScene : Scene
                 if (Game.Player.Speed >= 10)
                 {
                     // TODO: 추격 씬 전환
-                    Console.WriteLine("추격씬:ㅈ" +
-                                      "");
+                    Console.WriteLine("추격씬");
                 }
                 else
                 {
