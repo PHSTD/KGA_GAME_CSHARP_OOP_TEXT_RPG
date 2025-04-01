@@ -5,7 +5,7 @@ public class TitleScene : Scene
     public override void Render()
     {
         Console.WriteLine("************************************");
-        Console.WriteLine("              레전드 RPG              ");
+        Console.WriteLine("           레전드 RPG              ");
         Console.WriteLine("************************************");
         Console.WriteLine();
     }
@@ -23,6 +23,11 @@ public class TitleScene : Scene
 
     public override void Next()
     {
-        // TODO: 다음 씬으로 전환 구현 필요
+        switch (input)
+        {
+            case ConsoleKey.D1:
+                Game.ChangeScene("Title");
+                break;
+        }
     }
 }

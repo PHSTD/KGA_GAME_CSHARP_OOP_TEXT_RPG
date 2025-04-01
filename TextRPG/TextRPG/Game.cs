@@ -18,6 +18,7 @@ public static class Game
         // 게임에 있는 모든 씬들을 보관하고 빠르게 찾아줄 용도로 쓸 자료구조
         sceneDic = new Dictionary<string, Scene>();
         sceneDic.Add("Title", new TitleScene());
+        sceneDic.Add("Town", new TownScene());
 
         // 처음시작할 씬을 선정
         curScene = sceneDic["Title"];
@@ -42,5 +43,10 @@ public static class Game
             curScene.Next();
             
         }
+    }
+
+    public static void ChangeScene(string sceneName)
+    {
+        curScene = sceneDic[sceneName];
     }
 }
