@@ -50,7 +50,7 @@ public class TownScene : Scene
         switch (input)
         {
             case ConsoleKey.Spacebar:
-                Game.ChangeScene("Title");
+                Game.ChangeScene("Town");
                 break;
         }
     }

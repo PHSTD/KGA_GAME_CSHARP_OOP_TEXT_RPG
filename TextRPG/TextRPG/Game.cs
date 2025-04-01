@@ -19,6 +19,7 @@ public static class Game
         sceneDic = new Dictionary<string, Scene>();
         sceneDic.Add("Title", new TitleScene());
         sceneDic.Add("Town", new TownScene());
+        sceneDic.Add("Shop", new ShopScene());
 
         // 처음시작할 씬을 선정
         curScene = sceneDic["Title"];
@@ -33,12 +34,13 @@ public static class Game
         // 게임 동작시에 필요한 작업들
         while (gameOver == false)
         {
-            Console.Clear();
-            
+           Console.Clear(); 
             curScene.Render();
+            Console.WriteLine();
             curScene.Choice();
             curScene.Input();
             curScene.Result();
+            Console.WriteLine();
             curScene.Wait();
             curScene.Next();
             
