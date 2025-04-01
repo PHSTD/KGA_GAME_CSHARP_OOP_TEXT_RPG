@@ -1,2 +1,17 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Docker 관련 무시
+Dockerfile*            # Dockerfile 또는 Dockerfile.XXX
+**/Dockerfile*         # 서브디렉토리 내 Dockerfile도 포함
+docker-compose.yml
+docker-compose.*.yml
+.dockerignore
+.docker/
+*.dockerfile           # 커스텀 확장자
+docker-compose.override.yml
+
+# Docker에서 생기는 파일들
+docker-volume/
+**/docker-volume/
+*.log
+
