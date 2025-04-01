@@ -74,5 +74,5 @@ Version.cs
 Version.h
 Version.cpp
 ./**/.dockerignore
-Dockerfile
+./**/Dockerfile
 
