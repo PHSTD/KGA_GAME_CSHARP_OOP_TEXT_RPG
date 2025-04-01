@@ -26,7 +26,7 @@ public class TitleScene : Scene
         switch (input)
         {
             case ConsoleKey.D1:
-                Game.ChangeScene("Title");
+                Game.ChangeScene("Town");
                 break;
         }
     }

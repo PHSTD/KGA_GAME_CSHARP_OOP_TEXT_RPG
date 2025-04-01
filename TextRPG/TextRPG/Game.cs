@@ -51,4 +51,14 @@ public static class Game
     {
         curScene = sceneDic[sceneName];
     }
+
+    public static void GameOver(string reason)
+    {
+        Console.Clear();
+        Console.WriteLine("게임오버");
+        Console.WriteLine(reason);
+
+        gameOver = true;
+    }
+    
 }
